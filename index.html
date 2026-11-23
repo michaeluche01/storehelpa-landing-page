@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storehelpa — Know what is on your shelves and in your till.</title>
+  <meta name="description" content="Storehelpa is a daily control center for independent shops — offline-ready point of sale, barcode stock control, cash reconciliation, and immutable daily reports that keep working when the internet drops.">
+  <meta name="theme-color" content="#0066CC">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Storehelpa">
+  <link rel="canonical" href="https://storehelpa.com">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Storehelpa">
+  <meta property="og:title" content="Storehelpa — Know what is on your shelves and in your till.">
+  <meta property="og:description" content="Offline-ready point of sale, barcode stock control, and daily reports for independent shops.">
+  <meta property="og:url" content="https://storehelpa.com">
+  <meta property="og:image" content="https://storehelpa.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Storehelpa — Know what is on your shelves and in your till.">
+  <meta name="twitter:description" content="Offline-ready point of sale, barcode stock control, and daily reports for independent shops.">
+  <meta name="twitter:image" content="https://storehelpa.com/og-image.png">
+
+  <!-- Official Storehelpa Favicons & Manifest -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" sizes="any" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Preload first showcase screenshot for instant render -->
+  <link rel="preload" as="image" href="/assets/screens/overview.png">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="site-header">
+    <div class="wrap header-inner">
+      <a href="#top" class="brand" aria-label="Storehelpa home">
+        <img class="brand-mark" src="/assets/brand/storehelpa-icon.svg" width="32" height="32" alt="">
+        <span class="brand-word">Storehelpa</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#showcase">Live Tour</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#roles">Roles</a>
+        <a href="#architecture">Offline Engine</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-ghost btn-sm" href="https://app.storehelpa.com/login">Sign in</a>
+        <a class="btn btn-primary btn-sm" href="#get-started">Get started</a>
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          aria-label="Open menu"
+        >
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <div class="wrap mobile-nav-inner">
+        <a href="#showcase">Live Tour</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#roles">Roles &amp; Security</a>
+        <a href="#architecture">Offline Engine</a>
+        <a href="#faq">FAQ</a>
+        <div class="mobile-nav-ctas">
+          <a class="btn btn-ghost" href="https://app.storehelpa.com/login">Sign in to App</a>
+          <a class="btn btn-primary" href="#get-started">Request Shop Setup</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="hero-backdrop" aria-hidden="true">
+        <div class="hero-grid"></div>
+        <div class="hero-glow hero-glow-blue"></div>
+        <div class="hero-glow hero-glow-teal"></div>
+        <div class="hero-scan-beam"></div>
+      </div>
+
+      <div class="wrap hero-inner">
+        <div class="status-pill reveal-on-load" style="--delay: 0ms">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          <span>LIVE ON APP.STOREHELPA.COM</span>
+          <span class="status-sep" aria-hidden="true">·</span>
+          <span class="status-sub">OFFLINE-FIRST PWA</span>
+        </div>
+
+        <h1 class="hero-headline reveal-on-load" style="--delay: 70ms">
+          Know what is on your shelves<br>
+          <span class="hero-headline-accent">and in your till.</span>
+        </h1>
+
+        <p class="hero-sub reveal-on-load" style="--delay: 140ms">
+          Storehelpa is a daily control center for independent shops — offline-ready point of sale,
+          barcode stock control, cash reconciliation, and immutable daily reports that keep working
+          when the internet drops.
+        </p>
+
+        <div class="hero-ctas reveal-on-load" style="--delay: 210ms">
+          <a class="btn btn-primary btn-lg" href="https://app.storehelpa.com/login">
+            <span>Open Storehelpa App</span>
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M4.5 10h11m0 0-4.25-4.25M15.5 10l-4.25 4.25" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a class="btn btn-ghost btn-lg" href="#get-started">Request shop setup</a>
+          <a class="btn btn-link" href="#showcase">
+            <span>Explore live screens</span>
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M10 4.5v11m0 0-4-4m4 4 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <ul class="hero-pillars reveal-on-load" style="--delay: 280ms" aria-label="Core capabilities">
+          <li>Offline-first POS</li>
+          <li>Barcode inventory</li>
+          <li>Multi-role audit trail</li>
+          <li>Locked Close Day</li>
+        </ul>
+
+        <!-- Motion-Graphics Telemetry Ticker -->
+        <div class="telemetry-bar reveal-on-load" style="--delay: 350ms" aria-label="Live shop workflow highlights">
+          <div class="telemetry-badge">
+            <span class="telemetry-dot" aria-hidden="true"></span>
+            <span>WORKFLOW PULSE</span>
+          </div>
+          <div class="telemetry-viewport" aria-hidden="true">
+            <div class="telemetry-track">
+              <div class="telemetry-group">
+                <span class="t-chip"><em class="t-tag t-pos">POS</em> Scan carton barcode → 12 base units added</span>
+                <span class="t-chip"><em class="t-tag t-sync">OFFLINE</em> Sale saved locally to IndexedDB · queued for sync</span>
+                <span class="t-chip"><em class="t-tag t-stock">FEFO</em> Earliest-expiry batch allocated automatically</span>
+                <span class="t-chip"><em class="t-tag t-lock">CLOSE DAY</em> Cash counted · immutable snapshot locked</span>
+                <span class="t-chip"><em class="t-tag t-role">GUARDRAIL</em> Discount above 5% verified with Owner PIN</span>
+                <span class="t-chip"><em class="t-tag t-sync">SYNCED</em> Converged cleanly with api.storehelpa.com</span>
+              </div>
+              <div class="telemetry-group" aria-hidden="true">
+                <span class="t-chip"><em class="t-tag t-pos">POS</em> Scan carton barcode → 12 base units added</span>
+                <span class="t-chip"><em class="t-tag t-sync">OFFLINE</em> Sale saved locally to IndexedDB · queued for sync</span>
+                <span class="t-chip"><em class="t-tag t-stock">FEFO</em> Earliest-expiry batch allocated automatically</span>
+                <span class="t-chip"><em class="t-tag t-lock">CLOSE DAY</em> Cash counted · immutable snapshot locked</span>
+                <span class="t-chip"><em class="t-tag t-role">GUARDRAIL</em> Discount above 5% verified with Owner PIN</span>
+                <span class="t-chip"><em class="t-tag t-sync">SYNCED</em> Converged cleanly with api.storehelpa.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INTERACTIVE MOTION-GRAPHICS APP SHOWCASE ============ -->
+    <section class="section section-showcase" id="showcase" aria-labelledby="showcase-title">
+      <div class="wrap">
+        <div class="showcase-header reveal">
+          <div>
+            <p class="section-eyebrow section-eyebrow-light">Live Product Tour · app.storehelpa.com</p>
+            <h2 class="section-title section-title-light" id="showcase-title">
+              See the live workspace in motion.
+            </h2>
+          </div>
+          <p class="showcase-intro">
+            Real screens from the running Storehelpa PWA — engineered for fast checkouts,
+            movement-backed stock counts, and accountable shifts across every registered device.
+          </p>
+        </div>
+
+        <!-- Chapter Selector Tabs with Animated GPU Progress Bars -->
+        <div class="showcase-controls reveal" role="tablist" aria-label="Storehelpa app screens">
+          <button class="chapter-tab is-active" role="tab" aria-selected="true" aria-controls="stage-panel" data-slide="0" type="button">
+            <span class="chapter-num">01</span>
+            <span class="chapter-copy">
+              <strong>Overview</strong>
+              <span>Live branch pulse</span>
+            </span>
+            <span class="chapter-progress" aria-hidden="true"><span class="chapter-progress-fill"></span></span>
+          </button>
+
+          <button class="chapter-tab" role="tab" aria-selected="false" aria-controls="stage-panel" data-slide="1" type="button">
+            <span class="chapter-num">02</span>
+            <span class="chapter-copy">
+              <strong>Point of Sale</strong>
+              <span>Scan-first checkout</span>
+            </span>
+            <span class="chapter-progress" aria-hidden="true"><span class="chapter-progress-fill"></span></span>
+          </button>
+
+          <button class="chapter-tab" role="tab" aria-selected="false" aria-controls="stage-panel" data-slide="2" type="button">
+            <span class="chapter-num">03</span>
+            <span class="chapter-copy">
+              <strong>Stock Control</strong>
+              <span>Movement ledger</span>
+            </span>
+            <span class="chapter-progress" aria-hidden="true"><span class="chapter-progress-fill"></span></span>
+          </button>
+
+          <button class="chapter-tab" role="tab" aria-selected="false" aria-controls="stage-panel" data-slide="3" type="button">
+            <span class="chapter-num">04</span>
+            <span class="chapter-copy">
+              <strong>Team &amp; Rules</strong>
+              <span>Shifts &amp; PIN guards</span>
+            </span>
+            <span class="chapter-progress" aria-hidden="true"><span class="chapter-progress-fill"></span></span>
+          </button>
+
+          <div class="showcase-transport" aria-label="Tour playback controls">
+            <button class="icon-btn" id="showcase-prev" type="button" aria-label="Previous screen">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M12.5 5 7.5 10l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button class="icon-btn" id="showcase-play-toggle" type="button" aria-label="Pause auto-tour" aria-pressed="false">
+              <svg class="icon-pause" width="15" height="15" viewBox="0 0 20 20" fill="none"><path d="M7.5 5v10M12.5 5v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg class="icon-play" width="15" height="15" viewBox="0 0 20 20" fill="none" hidden><path d="M7 5.2v9.6L15 10 7 5.2Z" fill="currentColor"/></svg>
+            </button>
+            <button class="icon-btn" id="showcase-next" type="button" aria-label="Next screen">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M7.5 5l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Cinema Product Stage -->
+        <div class="showcase-stage reveal" id="stage-panel" role="tabpanel">
+          <!-- Interactive 3D Perspective App Frame -->
+          <div class="stage-visual-wrap">
+            <div class="stage-aura" aria-hidden="true"></div>
+
+            <div class="app-window" id="app-window">
+              <div class="app-window-bar">
+                <div class="window-dots" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="window-url">
+                  <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M4.5 7V5.25a3.5 3.5 0 0 1 7 0V7M3.5 7h9a1 1 0 0 1 1 1v4.5a1 1 0 0 1-1 1h-9a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.3"/>
+                  </svg>
+                  <span id="stage-url">app.storehelpa.com/overview</span>
+                </div>
+                <div class="window-bar-right">
+                  <span class="window-status-pill" id="stage-status">
+                    <span class="mini-dot" aria-hidden="true"></span>
+                    <span>Live PWA</span>
+                  </span>
+                  <button class="expand-btn" id="stage-expand" type="button" aria-label="View screenshot fullscreen">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <path d="M10 2.5h3.5V6M6 13.5H2.5V10M13.5 2.5 9.2 6.8M2.5 13.5l4.3-4.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Zoom</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="app-viewport" id="app-viewport">
+                <div class="viewport-sheen" id="viewport-sheen" aria-hidden="true"></div>
+
+                <figure class="screen-slide is-active" data-slide-frame="0">
+                  <img
+                    src="/assets/screens/overview.png"
+                    alt="Storehelpa Overview dashboard showing live daily sales, net sales, 7-day trend chart, CSV and Excel export buttons, active shifts, registered devices, and Sync Center."
+                    width="1024"
+                    height="520"
+                    decoding="async"
+                  >
+                </figure>
+
+                <figure class="screen-slide" data-slide-frame="1">
+                  <img
+                    src="/assets/screens/pos-sell.jpg"
+                    alt="Storehelpa Point of Sale screen showing barcode and camera search, keyboard shortcuts F2 to F8, product grid with prices and stock counts, VAT calculation, and held carts."
+                    width="1024"
+                    height="519"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </figure>
+
+                <figure class="screen-slide" data-slide-frame="2">
+                  <img
+                    src="/assets/screens/inventory.png"
+                    alt="Storehelpa Stock Control inventory workspace showing Products, Receive, Adjust, Count, Suppliers, Categories, Scanner, Labels, Alerts, and History tabs with unit and cost tracking."
+                    width="1024"
+                    height="520"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </figure>
+
+                <figure class="screen-slide" data-slide-frame="3">
+                  <img
+                    src="/assets/screens/attendance.png"
+                    alt="Storehelpa Team Attendance and Shift Rules screen showing immutable shift clock-in timer, team shift history with CSV export, zero-stock guard, and cashier discount limit."
+                    width="1024"
+                    height="520"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </figure>
+              </div>
+            </div>
+
+            <!-- Kinetic Motion-Graphics Callout Strip (synchronized per screen) -->
+            <div class="stage-callouts" id="stage-callouts" aria-live="polite">
+              <div class="callout-pill is-visible" style="--c-delay: 0ms">
+                <span class="callout-dot"></span>
+                <span data-callout="0">Live Sales, Net Sales &amp; Avg Sale</span>
+              </div>
+              <div class="callout-pill is-visible" style="--c-delay: 90ms">
+                <span class="callout-dot callout-dot-teal"></span>
+                <span data-callout="1">1-Click CSV &amp; Excel (.xls) Export</span>
+              </div>
+              <div class="callout-pill is-visible" style="--c-delay: 180ms">
+                <span class="callout-dot callout-dot-amber"></span>
+                <span data-callout="2">3 / 3 Registered Devices · Sync Center</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Storyboard Inspector -->
+          <aside class="stage-inspector" aria-live="polite">
+            <div class="inspector-meta">
+              <span class="inspector-tag" id="inspector-tag">01 · OVERVIEW</span>
+              <span class="inspector-route" id="inspector-route">/overview</span>
+            </div>
+
+            <h3 class="inspector-title" id="inspector-title">
+              Your branch pulse, refreshed automatically.
+            </h3>
+
+            <p class="inspector-desc" id="inspector-desc">
+              See today's gross sales, net sales, transaction count, and average basket at a glance — alongside 7- and 30-day trends, clocked-in staff, active devices, and pending sync status.
+            </p>
+
+            <ul class="inspector-points" id="inspector-points">
+              <li>Role-aware metrics: Cashiers see own sales; Owners see full branch figures.</li>
+              <li>Export any chart or table to CSV or Excel-compatible .xls in one tap.</li>
+              <li>Isolated Practice Shop banner lets staff train without touching live books.</li>
+            </ul>
+
+            <div class="inspector-footer">
+              <a class="btn btn-primary" href="https://app.storehelpa.com/login">
+                <span>Launch app.storehelpa.com</span>
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M5.5 14.5 14.5 5.5m0 0H7.5m7 0v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <p class="inspector-hint">Click any screen or press ← / → keys to navigate.</p>
+            </div>
+          </aside>
+        </div>
+
+        <!-- Mini Filmstrip Thumbnails -->
+        <div class="filmstrip reveal" aria-label="Quick screen switcher">
+          <button class="thumb-card is-active" data-thumb="0" type="button">
+            <img src="/assets/screens/overview.png" alt="" width="256" height="130" loading="lazy">
+            <span>01 · Overview</span>
+          </button>
+          <button class="thumb-card" data-thumb="1" type="button">
+            <img src="/assets/screens/pos-sell.jpg" alt="" width="256" height="130" loading="lazy">
+            <span>02 · Point of Sale</span>
+          </button>
+          <button class="thumb-card" data-thumb="2" type="button">
+            <img src="/assets/screens/inventory.png" alt="" width="256" height="130" loading="lazy">
+            <span>03 · Stock Control</span>
+          </button>
+          <button class="thumb-card" data-thumb="3" type="button">
+            <img src="/assets/screens/attendance.png" alt="" width="256" height="130" loading="lazy">
+            <span>04 · Attendance</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CAPABILITIES BENTO (CRISP LIGHT CANVAS) ============ -->
+    <section class="section section-light" id="capabilities">
+      <div class="wrap">
+        <div class="light-header reveal">
+          <div class="light-header-copy">
+            <p class="section-eyebrow">Every Module Connected</p>
+            <h2 class="section-title">
+              From opening float to locked Close Day — built for real shop floors.
+            </h2>
+          </div>
+          <div class="brand-lockup-card" aria-label="Storehelpa brand lockup">
+            <img
+              src="/assets/brand/storehelpa-wordmark.png"
+              alt="Storehelpa"
+              width="200"
+              height="45"
+              loading="lazy"
+            >
+            <span>Your shop, in good hands.</span>
+          </div>
+        </div>
+
+        <div class="bento-grid">
+          <article class="bento-card bento-wide reveal">
+            <div class="bento-top">
+              <div class="bento-icon bento-icon-blue" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7V5a1 1 0 0 1 1-1h2M17 4h2a1 1 0 0 1 1 1v2M20 17v2a1 1 0 0 1-1 1h-2M7 20H5a1 1 0 0 1-1-1v-2M7 8v8M10 8v8M14 8v8M17 8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </div>
+              <span class="bento-chip">SELL · POS</span>
+            </div>
+            <h3>Scan-first point of sale</h3>
+            <p>
+              Scan unit or carton barcodes with a USB/Bluetooth HID scanner or phone camera, or work
+              hands-on-keyboard with <code>F2</code> search, <code>F4</code> charge, <code>F6</code> hold,
+              and <code>F8</code> new cart. Hold and resume carts across cashiers, record cash, bank transfer,
+              POS terminal, or split tenders, print 58mm/80mm receipts, or share via WhatsApp.
+            </p>
+            <div class="bento-meta-row">
+              <span>58mm &amp; 80mm thermal</span>
+              <span>WhatsApp receipts</span>
+              <span>Approved voids &amp; returns</span>
+            </div>
+          </article>
+
+          <article class="bento-card reveal">
+            <div class="bento-top">
+              <div class="bento-icon bento-icon-teal" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+              </div>
+              <span class="bento-chip">STOCK CONTROL</span>
+            </div>
+            <h3>Movement-backed stock</h3>
+            <p>
+              On-hand stock is always the sum of every recorded movement. Receive supplier stock with carton-to-unit
+              conversion, log damage adjustments with reasons, run partial stock-takes without zeroing uncounted items,
+              and print shelf barcode labels.
+            </p>
+          </article>
+
+          <article class="bento-card reveal">
+            <div class="bento-top">
+              <div class="bento-icon bento-icon-amber" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 9v4m0 4h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <span class="bento-chip">FEFO &amp; ALERTS</span>
+            </div>
+            <h3>Earliest-expiry first</h3>
+            <p>
+              Dated batches allocate earliest-expiry first at checkout, while expired batches are blocked
+              automatically. Low-stock, near-expiry, and expired alerts surface before you lose a sale or stock.
+            </p>
+          </article>
+
+          <article class="bento-card reveal">
+            <div class="bento-top">
+              <div class="bento-icon bento-icon-blue" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </div>
+              <span class="bento-chip">MONEY · CLOSE DAY</span>
+            </div>
+            <h3>Cash, expenses &amp; locked Close Day</h3>
+            <p>
+              Track opening float, staff stock/cash/expense requests, and photo-backed expenses. Close Day steps
+              through attendance, stock, sales, and counted cash — locking the day with an immutable snapshot.
+              Variances or reopening require an Owner PIN.
+            </p>
+          </article>
+
+          <article class="bento-card bento-wide reveal">
+            <div class="bento-top">
+              <div class="bento-icon bento-icon-teal" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 3v18h18M7 15l4-4 3 3 5-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <span class="bento-chip">INSIGHTS · AUDIT</span>
+            </div>
+            <h3>Immutable reports &amp; full audit trail</h3>
+            <p>
+              Generate numbered Day, Month, and completed-Year report snapshots that reopen unchanged even if
+              product names or settings change later. Print clean A4 sheets, export CSV or Excel-compatible
+              <code>.xls</code> tables, and search a read-only audit trail showing who did what, when, and on which device.
+            </p>
+            <div class="bento-meta-row">
+              <span>Frozen A4 PDF sheets</span>
+              <span>CSV &amp; .xls exports</span>
+              <span>Every device &amp; actor logged</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INTERACTIVE 5-ROLE GOVERNANCE MATRIX ============ -->
+    <section class="section section-dark" id="roles">
+      <div class="wrap">
+        <div class="roles-layout">
+          <div class="roles-intro reveal">
+            <p class="section-eyebrow section-eyebrow-light">Roles &amp; Device Governance</p>
+            <h2 class="section-title section-title-light">
+              Five roles. Approved devices. Zero blind spots.
+            </h2>
+            <p class="roles-sub">
+              Every person on your floor sees only what their role allows — and access stays locked to
+              registered shop devices. Select a role to inspect its exact boundaries inside Storehelpa.
+            </p>
+
+            <div class="role-selector" role="tablist" aria-label="Storehelpa user roles">
+              <button class="role-pill is-active" role="tab" aria-selected="true" data-role="owner" type="button">Owner</button>
+              <button class="role-pill" role="tab" aria-selected="false" data-role="manager" type="button">Manager</button>
+              <button class="role-pill" role="tab" aria-selected="false" data-role="cashier" type="button">Cashier</button>
+              <button class="role-pill" role="tab" aria-selected="false" data-role="storekeeper" type="button">Storekeeper</button>
+              <button class="role-pill" role="tab" aria-selected="false" data-role="auditor" type="button">Auditor</button>
+            </div>
+          </div>
+
+          <div class="role-console reveal" id="role-console" aria-live="polite">
+            <div class="role-console-head">
+              <div>
+                <span class="role-badge" id="role-badge">FULL CONTROL + OWNER PIN</span>
+                <h3 id="role-title">Owner</h3>
+              </div>
+              <span class="role-device-chip">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.5 13.5 4v4c0 3.3-2.3 5.7-5.5 6.5C4.8 13.7 2.5 11.3 2.5 8V4L8 1.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+                <span>Registered Device Required</span>
+              </span>
+            </div>
+            <p class="role-summary" id="role-summary">
+              Full visibility across sales, stock costs, margins, cash reconciliation, team shifts, immutable reports, and device governance.
+            </p>
+
+            <div class="role-columns">
+              <div class="role-col">
+                <h4>Permitted actions</h4>
+                <ul class="role-list role-allow" id="role-allow">
+                  <li>Configure shift, VAT, zero-stock &amp; discount rules</li>
+                  <li>Authorize Close Day variances &amp; reopenings with PIN</li>
+                  <li>Generate frozen reports &amp; revoke registered devices</li>
+                </ul>
+              </div>
+              <div class="role-col">
+                <h4>Built-in protection</h4>
+                <ul class="role-list role-guard" id="role-guard">
+                  <li>Original sales &amp; closed snapshots can never be edited</li>
+                  <li>Every approval &amp; override logs actor, PIN check &amp; device</li>
+                  <li>Reopening a closed day always appends a new revision</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ANIMATED OFFLINE-FIRST ARCHITECTURE VISUALIZER ============ -->
+    <section class="section section-light" id="architecture">
+      <div class="wrap">
+        <div class="arch-header reveal">
+          <div>
+            <p class="section-eyebrow">Offline-First Architecture</p>
+            <h2 class="section-title">
+              Keeps selling when the network drops. Converges cleanly when it returns.
+            </h2>
+          </div>
+          <button class="sim-toggle" id="sim-offline-btn" type="button" aria-pressed="false">
+            <span class="sim-indicator" aria-hidden="true"></span>
+            <span id="sim-btn-label">Simulate network drop</span>
+          </button>
+        </div>
+
+        <div class="arch-stage reveal" id="arch-stage" data-state="online">
+          <div class="arch-status-strip">
+            <span class="arch-state-badge" id="arch-state-badge">ONLINE · REAL-TIME SYNC ACTIVE</span>
+            <span class="arch-state-note" id="arch-state-note">
+              Sales and stock writes commit locally first, then converge immediately with api.storehelpa.com.
+            </span>
+          </div>
+
+          <div class="arch-flow">
+            <!-- Node 1 -->
+            <div class="arch-node arch-node-device">
+              <div class="arch-node-head">
+                <span class="arch-step">01</span>
+                <span class="arch-domain">app.storehelpa.com</span>
+              </div>
+              <h3>Shop Till &amp; Phone PWA</h3>
+              <p>
+                Every sale, receipt, clock-in, expense, and stock movement writes to local IndexedDB first — zero spinner waiting on mobile data.
+              </p>
+              <div class="arch-metric">
+                <span class="arch-metric-label">Local store</span>
+                <strong id="arch-local-status">IndexedDB · Active</strong>
+              </div>
+            </div>
+
+            <!-- Connector 1 -->
+            <div class="arch-pipe" aria-hidden="true">
+              <svg viewBox="0 0 120 36" fill="none" preserveAspectRatio="none">
+                <path class="pipe-track" d="M4 18H116" stroke-width="2" stroke-linecap="round"/>
+                <path class="pipe-pulse pipe-pulse-1" d="M4 18H116" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+              <span class="pipe-label" id="pipe-label-1">Write locally</span>
+            </div>
+
+            <!-- Node 2 -->
+            <div class="arch-node arch-node-sync">
+              <div class="arch-node-head">
+                <span class="arch-step">02</span>
+                <span class="arch-domain">Sync Center</span>
+              </div>
+              <h3>Idempotent Command Outbox</h3>
+              <p>
+                Queues pending commands with unique IDs, automatic retry/backoff, and conflict visibility so reconnecting never duplicates a sale or stock deduction.
+              </p>
+              <div class="arch-metric">
+                <span class="arch-metric-label">Outbox queue</span>
+                <strong id="arch-queue-count">0 pending · All synced</strong>
+              </div>
+            </div>
+
+            <!-- Connector 2 -->
+            <div class="arch-pipe arch-pipe-cloud" aria-hidden="true">
+              <svg viewBox="0 0 120 36" fill="none" preserveAspectRatio="none">
+                <path class="pipe-track" d="M4 18H116" stroke-width="2" stroke-linecap="round"/>
+                <path class="pipe-pulse pipe-pulse-2" d="M4 18H116" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+              <span class="pipe-label" id="pipe-label-2">HTTPS / Cursor pull</span>
+            </div>
+
+            <!-- Node 3 -->
+            <div class="arch-node arch-node-api">
+              <div class="arch-node-head">
+                <span class="arch-step">03</span>
+                <span class="arch-domain">api.storehelpa.com</span>
+              </div>
+              <h3>Storehelpa Cloud Ledger</h3>
+              <p>
+                FastAPI + PostgreSQL + Redis backend enforcing registered-device limits, role permissions, multi-device branch convergence, and PDF reports.
+              </p>
+              <div class="arch-metric">
+                <span class="arch-metric-label">Cloud state</span>
+                <strong id="arch-cloud-status">Connected · Converged</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PLANS & ONBOARDING CTA ============ -->
+    <section class="section section-cta" id="get-started">
+      <div class="wrap">
+        <div class="cta-top reveal">
+          <p class="section-eyebrow section-eyebrow-light">Ready When Your Shop Is</p>
+          <h2 class="section-title section-title-light">
+            Start running a tighter shop today.
+          </h2>
+          <p class="cta-sub">
+            Storehelpa is live on <code>app.storehelpa.com</code>. Sign in right away if your shop is already provisioned, or request onboarding below and we'll get your workspace configured.
+          </p>
+        </div>
+
+        <!-- Honest Plans Row (aligned with WelcomePage.tsx) -->
+        <div class="plans-grid reveal">
+          <article class="plan-card">
+            <span class="plan-tag">STARTER</span>
+            <h3>Single-branch shop</h3>
+            <p>Configured for up to 3 registered devices — ideal for an owner plus counter and stockroom devices.</p>
+            <span class="plan-price">Pricing on request</span>
+          </article>
+          <article class="plan-card plan-card-featured">
+            <span class="plan-tag">GROWING TEAM</span>
+            <h3>Busy multi-till counter</h3>
+            <p>Custom device allowance, full 5-role governance, shift rules, Close Day locks, and dedicated onboarding.</p>
+            <span class="plan-price">Custom arrangement</span>
+          </article>
+          <article class="plan-card">
+            <span class="plan-tag">MULTI-BRANCH</span>
+            <h3>Multiple store locations</h3>
+            <p>Branch-isolated stock and cash ledgers, centralized owner reporting, and tailored rollout support.</p>
+            <span class="plan-price">Custom arrangement</span>
+          </article>
+        </div>
+
+        <!-- Dual Action Card: Existing Login + Request Onboarding Form -->
+        <div class="onboarding-panel reveal">
+          <div class="onboarding-form-col">
+            <h3>Request shop onboarding</h3>
+            <p>Leave your email and shop name — we'll reach out with setup details and access credentials.</p>
+
+            <form class="cta-form" id="waitlist-form" data-waitlist-form>
+              <div class="form-row">
+                <label class="sr-only" for="email-main">Work or shop email</label>
+                <input
+                  class="email-input"
+                  type="email"
+                  id="email-main"
+                  name="email"
+                  placeholder="you@yourshop.com"
+                  required
+                  autocomplete="email"
+                  inputmode="email"
+                >
+                <label class="sr-only" for="business-main">Shop or business name</label>
+                <input
+                  class="text-input"
+                  type="text"
+                  id="business-main"
+                  name="business"
+                  placeholder="Shop name (optional)"
+                  autocomplete="organization"
+                >
+              </div>
+              <button class="btn btn-primary btn-lg" type="submit">
+                <span class="btn-label">Request shop setup</span>
+                <span class="btn-loading" hidden>Sending…</span>
+              </button>
+            </form>
+
+            <div class="form-status" id="form-status" role="status" aria-live="polite" hidden></div>
+            <p class="cta-microcopy">No spam. No card required. Direct response from the Storehelpa team.</p>
+          </div>
+
+          <div class="onboarding-divider" aria-hidden="true"><span>OR</span></div>
+
+          <div class="onboarding-app-col">
+            <span class="live-chip"><span class="mini-dot"></span>LIVE SERVICE</span>
+            <h3>Already have a workspace?</h3>
+            <p>Jump straight into your registered till, stockroom, or owner dashboard at <code>app.storehelpa.com</code>.</p>
+            <a class="btn btn-ghost btn-lg" href="https://app.storehelpa.com/login">
+              <span>Sign in to app.storehelpa.com</span>
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5.5 14.5 14.5 5.5m0 0H7.5m7 0v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section section-light" id="faq">
+      <div class="wrap faq-wrap">
+        <div class="reveal">
+          <p class="section-eyebrow">Questions</p>
+          <h2 class="section-title">Straight answers before you switch.</h2>
+        </div>
+
+        <div class="faq-list reveal">
+          <div class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-panel-0">
+              <span>Is Storehelpa live and ready to use?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 7.5 5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-panel" id="faq-panel-0" hidden>
+              <p>Yes. The Storehelpa web app runs live at <a href="https://app.storehelpa.com">app.storehelpa.com</a>, backed by our production API at <code>api.storehelpa.com</code>, syncing records across your approved shop devices.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-panel-1">
+              <span>Can my cashiers keep selling if the internet drops?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 7.5 5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-panel" id="faq-panel-1" hidden>
+              <p>Yes. Storehelpa is an installable offline-first PWA. Sales, stock movements, attendance clock-ins, expenses, and Day Close snapshots save safely to local IndexedDB first and sync automatically through Sync Center once your connection returns.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-panel-2">
+              <span>Do I need special barcode hardware to start?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 7.5 5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-panel" id="faq-panel-2" hidden>
+              <p>No. You can scan EAN-13, EAN-8, UPC-A, Code128, Code39, and QR codes using your phone or laptop camera right away — and plug in any standard USB or Bluetooth HID barcode scanner whenever you want faster counter speed.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-panel-3">
+              <span>How do staff accounts and device limits work?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 7.5 5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-panel" id="faq-panel-3" hidden>
+              <p>Owners and Managers invite staff with one of five roles (Owner, Manager, Cashier, Storekeeper, Auditor). Access is tied to each approved browser profile — Owners can review, rename, or revoke any device from Workspace settings.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-panel-4">
+              <span>Does Storehelpa process customer card or bank transfer payments?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 7.5 5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-panel" id="faq-panel-4" hidden>
+              <p>No. Storehelpa records cash, bank transfer, POS terminal, and split payments cleanly on every receipt and reconciles your till — your staff continue verifying transfers and terminal charges on your existing bank and POS tools.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <a href="#top" class="brand" aria-label="Storehelpa home">
+          <img class="brand-mark" src="/assets/brand/storehelpa-icon.svg" width="30" height="30" alt="">
+          <span class="brand-word">Storehelpa</span>
+        </a>
+        <p>Offline-ready point of sale, barcode stock control, and daily reports for independent shops.</p>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#showcase">Live Tour</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#roles">Roles</a>
+        <a href="#architecture">Offline Engine</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://app.storehelpa.com/login">Open App</a>
+        <a href="mailto:hello@storehelpa.com">Contact</a>
+      </nav>
+    </div>
+
+    <div class="wrap footer-bottom">
+      <p>© <span id="footer-year">2026</span> Storehelpa. All rights reserved.</p>
+      <p class="footer-domains">storehelpa.com · app.storehelpa.com · api.storehelpa.com</p>
+    </div>
+  </footer>
+
+  <!-- ============ FULLSCREEN SCREENSHOT LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption" hidden>
+    <div class="lightbox-backdrop" data-lightbox-close></div>
+    <div class="lightbox-card">
+      <div class="lightbox-bar">
+        <span class="lightbox-caption" id="lightbox-caption">Storehelpa Overview</span>
+        <div class="lightbox-actions">
+          <button class="icon-btn" id="lightbox-prev" type="button" aria-label="Previous screenshot">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M12.5 5 7.5 10l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="icon-btn" id="lightbox-next" type="button" aria-label="Next screenshot">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M7.5 5l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="icon-btn" id="lightbox-close" type="button" aria-label="Close fullscreen view" data-lightbox-close>
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="lightbox-img-wrap">
+        <img id="lightbox-img" src="/assets/screens/overview.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>

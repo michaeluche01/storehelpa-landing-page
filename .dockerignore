@@ -1,0 +1,7 @@
+.git
+.gitignore
+README.md
+railway.json
+*.md
+.DS_Store
+Thumbs.db
