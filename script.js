@@ -184,9 +184,11 @@ async function submitToWaitlist({ email, business }) {
 
   let activeSlide = 0;
   let isPlaying = !prefersReducedMotion;
-  let isHovered = false;
+  let isZoomed = false;
   let slideTimer = null;
-  const SLIDE_MS = 6500;
+  const SLIDE_MS = 3600;
+  let remainingMs = SLIDE_MS;
+  let timerStartedAt = 0;
 
   function renderSlide(nextIndex, { triggerSheen = true } = {}) {
     const prevIndex = activeSlide;
@@ -255,20 +257,33 @@ async function submitToWaitlist({ email, business }) {
       syncLightbox();
     }
 
+    remainingMs = SLIDE_MS;
     scheduleNextSlide();
+  }
+
+  function pauseTimer() {
+    if (slideTimer) {
+      clearTimeout(slideTimer);
+      slideTimer = null;
+      const elapsed = Date.now() - timerStartedAt;
+      remainingMs = Math.max(250, remainingMs - elapsed);
+    }
   }
 
   function scheduleNextSlide() {
     clearTimeout(slideTimer);
-    if (!isPlaying || isHovered) return;
+    slideTimer = null;
+    if (!isPlaying || isZoomed) return;
+    timerStartedAt = Date.now();
     slideTimer = setTimeout(() => {
+      slideTimer = null;
       renderSlide(activeSlide + 1);
-    }, SLIDE_MS);
+    }, remainingMs);
   }
 
   function updatePlayUi() {
     if (!playToggleBtn || !showcaseSection) return;
-    const paused = !isPlaying || isHovered;
+    const paused = !isPlaying || isZoomed;
     showcaseSection.classList.toggle('showcase-stage-paused', paused);
     playToggleBtn.setAttribute('aria-pressed', String(!isPlaying));
     playToggleBtn.setAttribute('aria-label', isPlaying ? 'Pause auto-tour' : 'Resume auto-tour');
@@ -297,20 +312,11 @@ async function submitToWaitlist({ email, business }) {
     playToggleBtn.addEventListener('click', () => {
       isPlaying = !isPlaying;
       updatePlayUi();
-      scheduleNextSlide();
-    });
-  }
-
-  if (showcaseSection) {
-    showcaseSection.addEventListener('mouseenter', () => {
-      isHovered = true;
-      updatePlayUi();
-      clearTimeout(slideTimer);
-    });
-    showcaseSection.addEventListener('mouseleave', () => {
-      isHovered = false;
-      updatePlayUi();
-      scheduleNextSlide();
+      if (isPlaying) {
+        scheduleNextSlide();
+      } else {
+        pauseTimer();
+      }
     });
   }
 
@@ -348,16 +354,20 @@ async function submitToWaitlist({ email, business }) {
 
   function openLightbox() {
     if (!lightbox) return;
+    isZoomed = true;
+    pauseTimer();
     syncLightbox();
     lightbox.hidden = false;
     document.body.style.overflow = 'hidden';
-    clearTimeout(slideTimer);
+    updatePlayUi();
   }
 
   function closeLightbox() {
     if (!lightbox) return;
+    isZoomed = false;
     lightbox.hidden = true;
     document.body.style.overflow = '';
+    updatePlayUi();
     scheduleNextSlide();
   }
 

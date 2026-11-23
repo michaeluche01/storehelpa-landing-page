@@ -44,11 +44,12 @@
   --radius-md: 14px;
   --radius-lg: 20px;
   --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
-  --slide-duration: 6500ms;
+  --slide-duration: 3600ms;
 }
 
 /* ---------- Reset & Base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
@@ -843,6 +844,18 @@ code {
   height: 100%;
   object-fit: cover;
   object-position: top center;
+  transform: scale(1);
+  will-change: transform;
+}
+.screen-slide.is-active img {
+  animation: gentleDrift var(--slide-duration) ease-out forwards;
+}
+.showcase-stage-paused .screen-slide.is-active img {
+  animation-play-state: paused;
+}
+@keyframes gentleDrift {
+  from { transform: scale(1) translate3d(0, 0, 0); }
+  to { transform: scale(1.024) translate3d(0, -3px, 0); }
 }
 .screen-slide.is-active {
   opacity: 1;
