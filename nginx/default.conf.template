@@ -47,7 +47,7 @@ server {
     location ~* ^/(?:styles\.css|script\.js)$ {
         try_files $uri =404;
         include /etc/nginx/snippets/security-headers.conf;
-        add_header Cache-Control "public, max-age=3600, must-revalidate" always;
+        add_header Cache-Control "no-cache" always;
     }
 
     # Brand icons and showcase screenshots
